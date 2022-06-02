@@ -1,0 +1,44 @@
+;DIRECCIONAMIENTO INDIRECTO
+\\DATA 11
+ant             EQU     -1
+sig             EQU             1
+;inicializo los registros
+[0000] 04 00 A0 01          1:        mov        eax,          1
+[0001] 04 00 B0 05          2:        mov        ebx,          5
+[0002] 04 00 C0 02          3:        mov        ecx,          2
+[0003] 04 00 D0 08          4:        mov        edx,          8
+;relleno la memoria de 1 a 10
+[0004] 64 00 A0 07       otro:        cmp        eax,          7
+[0005] F2 00 00 09          6:         jz      sigue
+[0006] 0D 00 A0 0A          7:        mov      [eax],        eax
+[0007] 14 00 A0 01          8:        add        eax,          1
+[0008] F1 00 00 04          9:        jmp       otro
+;recupero registros y multiplico x10
+[0009] 4C FF C0 0A      sigue:        mul  [ecx+ant],         10
+[0010] 4C 00 C0 0A         11:        mul      [ecx],         10
+[0011] 4C 01 C0 0A         12:        mul  [ecx+sig],         10
+[0012] 4C FF B0 0A         13:        mul    [ebx-1],         10
+[0013] 4C 00 B0 0A         14:        mul      [ebx],         10
+[0014] 4C 01 B0 0A         15:        mul  [ebx-ant],         10
+[0015] 0F 00 AF FC         16:        mov      [eax],  [ecx-sig]
+[0016] FC C0 00 0A         17:       push      [eax]
+[0017] FC C0 00 0A         18:       push      [eax]
+[0018] 05 03 70 36         19:        mov         BP,         SP
+[0019] FC C0 00 0A         20:       push      [eax]
+[0020] 1C 00 70 01         21:        add       [BP],          1
+[0021] 1C 01 70 02         22:        add     [BP+1],          2
+[0022] 1C FF 70 03         23:        add     [BP-1],          3
+[0023] 0F 00 D0 07         24:        mov      [edx],       [bp]
+[0024] 0F 01 D0 17         25:        mov  [edx+sig],     [bp+1]
+[0025] 0F 02 DF F7         26:        mov    [edx+2],     [bp-1]
+;imprime todo
+[0026] 04 00 A0 01         27:        mov        eax,         %1
+[0027] 04 00 C0 0A         28:        mov        ecx,         10
+[0028] 04 00 D0 01         29:        mov        edx,          1
+[0029] F0 00 00 02         30:        sys         %2
+[0030] F0 00 00 0F         31:        sys         %F
+[0031] FF 10 00 00         32:       stop
+[0032] FF 10 00 00         33:       stop
+[0033] FF 10 00 00         34:       stop
+[0034] FF 10 00 00         35:       stop
+[0035] FF 10 00 00         36:       stop

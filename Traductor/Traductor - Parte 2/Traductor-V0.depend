@@ -1,0 +1,266 @@
+# depslib dependency file v1.0
+1649712498 source:c:\users\wendy\desktop\mv - traductor - p1\traductor-v0\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"parser.h"
+
+1648049340 c:\users\wendy\desktop\mv - traductor - p1\traductor-v0\parser.h
+
+1648918638 source:c:\users\wendy\desktop\mv - traductor - p1\traductor-v0\parser.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"parser.h"
+
+1648918638 source:c:\users\wendy\desktop\mv - traductor - p1\traductor-v1\parser.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"parser.h"
+
+1648049340 c:\users\wendy\desktop\mv - traductor - p1\traductor-v1\parser.h
+
+1649809917 source:c:\users\wendy\desktop\mv - traductor - p1\traductor-v1\auxiliares.c
+	"auxiliares.h"
+
+1649809940 c:\users\wendy\desktop\mv - traductor - p1\traductor-v1\auxiliares.h
+
+1649869091 source:c:\users\wendy\desktop\mv - traductor - p1\traductor-v1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"parser.h"
+	"auxiliares.h"
+
+1649809917 source:c:\users\wendy\desktop\mv - traductor - p1\traductor-v2\auxiliares.c
+	"auxiliares.h"
+
+1649809940 c:\users\wendy\desktop\mv - traductor - p1\traductor-v2\auxiliares.h
+
+1648918638 source:c:\users\wendy\desktop\mv - traductor - p1\traductor-v2\parser.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"parser.h"
+
+1648049340 c:\users\wendy\desktop\mv - traductor - p1\traductor-v2\parser.h
+
+1649875480 source:c:\users\wendy\desktop\mv - traductor - p1\traductor-v2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"parser.h"
+	"auxiliares.h"
+
+1649809917 source:c:\users\wendy\desktop\mv - traductor - p1\traductor-v4\auxiliares.c
+	"auxiliares.h"
+
+1649809940 c:\users\wendy\desktop\mv - traductor - p1\traductor-v4\auxiliares.h
+
+1648918638 source:c:\users\wendy\desktop\mv - traductor - p1\traductor-v4\parser.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"parser.h"
+
+1648049340 c:\users\wendy\desktop\mv - traductor - p1\traductor-v4\parser.h
+
+1649959346 source:c:\users\wendy\desktop\mv - traductor - p1\traductor-v4\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"parser.h"
+	"auxiliares.h"
+
+1649809917 source:c:\users\wendy\desktop\mv - traductor - p1\traductor-v5\auxiliares.c
+	"auxiliares.h"
+
+1649809940 c:\users\wendy\desktop\mv - traductor - p1\traductor-v5\auxiliares.h
+
+1648918638 source:c:\users\wendy\desktop\mv - traductor - p1\traductor-v5\parser.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"parser.h"
+
+1648049340 c:\users\wendy\desktop\mv - traductor - p1\traductor-v5\parser.h
+
+1649974447 source:c:\users\wendy\desktop\mv - traductor - p1\traductor-v5\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"parser.h"
+	"auxiliares.h"
+
+1649809918 source:c:\users\54223\desktop\traductor-v5\traductor-v5\auxiliares.c
+	"auxiliares.h"
+
+1649809942 c:\users\54223\desktop\traductor-v5\traductor-v5\auxiliares.h
+
+1650028447 source:c:\users\54223\desktop\traductor-v5\traductor-v5\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"parser.h"
+	"auxiliares.h"
+
+1648049340 c:\users\54223\desktop\traductor-v5\traductor-v5\parser.h
+
+1648918638 source:c:\users\54223\desktop\traductor-v5\traductor-v5\parser.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"parser.h"
+
+1649809918 source:c:\users\54223\desktop\mv1-k\source\mvc\traductor-v5\traductor-v5\auxiliares.c
+	"auxiliares.h"
+
+1649809942 c:\users\54223\desktop\mv1-k\source\mvc\traductor-v5\traductor-v5\auxiliares.h
+
+1648918638 source:c:\users\54223\desktop\mv1-k\source\mvc\traductor-v5\traductor-v5\parser.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"parser.h"
+
+1648049340 c:\users\54223\desktop\mv1-k\source\mvc\traductor-v5\traductor-v5\parser.h
+
+1649809918 source:c:\users\54223\desktop\traductor-v5\auxiliares.c
+	"auxiliares.h"
+
+1649809942 c:\users\54223\desktop\traductor-v5\auxiliares.h
+
+1648918638 source:c:\users\54223\desktop\traductor-v5\parser.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"parser.h"
+
+1648049340 c:\users\54223\desktop\traductor-v5\parser.h
+
+1650315107 source:c:\users\54223\desktop\traductor-v5\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"parser.h"
+	"auxiliares.h"
+
+1649809918 source:c:\users\54223\desktop\mv1-k\source\mvc\traductor-v5\auxiliares.c
+	"auxiliares.h"
+
+1649809942 c:\users\54223\desktop\mv1-k\source\mvc\traductor-v5\auxiliares.h
+
+1652281195 source:c:\users\54223\desktop\mv1-k\source\mvc\traductor-v5\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"parser.h"
+	"auxiliares.h"
+
+1648049340 c:\users\54223\desktop\mv1-k\source\mvc\traductor-v5\parser.h
+
+1648918638 source:c:\users\54223\desktop\mv1-k\source\mvc\traductor-v5\parser.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"parser.h"
+
+1649809918 source:c:\users\wendy\desktop\mvc\mvc\traductor-v5\auxiliares.c
+	"auxiliares.h"
+
+1649809942 c:\users\wendy\desktop\mvc\mvc\traductor-v5\auxiliares.h
+
+1652281195 source:c:\users\wendy\desktop\mvc\mvc\traductor-v5\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"parser.h"
+	"auxiliares.h"
+
+1648049340 c:\users\wendy\desktop\mvc\mvc\traductor-v5\parser.h
+
+1648918638 source:c:\users\wendy\desktop\mvc\mvc\traductor-v5\parser.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"parser.h"
+
+1652882362 source:c:\users\wendy\desktop\mvc-parte2\mvc\traductor-v5\auxiliares.c
+	<string.h>
+	<ctype.h>
+	"auxiliares.h"
+
+1652833943 c:\users\wendy\desktop\mvc-parte2\mvc\traductor-v5\auxiliares.h
+
+1650473534 source:c:\users\wendy\desktop\mvc-parte2\mvc\traductor-v5\parser.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"parser.h"
+
+1650473508 c:\users\wendy\desktop\mvc-parte2\mvc\traductor-v5\parser.h
+
+1653075678 source:c:\users\wendy\desktop\mvc-parte2\mvc\traductor-v5\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"parser.h"
+	"auxiliares.h"
+
+1653776662 source:c:\users\wendy\desktop\mvc-parte2\mvc\traductor-v6 (modificaciones funciones)\auxiliares.c
+	<string.h>
+	<ctype.h>
+	"auxiliares.h"
+
+1653776660 c:\users\wendy\desktop\mvc-parte2\mvc\traductor-v6 (modificaciones funciones)\auxiliares.h
+
+1650473534 source:c:\users\wendy\desktop\mvc-parte2\mvc\traductor-v6 (modificaciones funciones)\parser.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"parser.h"
+
+1650473508 c:\users\wendy\desktop\mvc-parte2\mvc\traductor-v6 (modificaciones funciones)\parser.h
+
+1653841531 source:c:\users\wendy\desktop\mvc-parte2\mvc\traductor-v6 (modificaciones funciones)\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"parser.h"
+	"auxiliares.h"
+
+1653776662 source:c:\users\wendy\desktop\traductor - parte 2\auxiliares.c
+	<string.h>
+	<ctype.h>
+	"auxiliares.h"
+
+1653776660 c:\users\wendy\desktop\traductor - parte 2\auxiliares.h
+
+1653932584 source:c:\users\wendy\desktop\traductor - parte 2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"parser.h"
+	"auxiliares.h"
+
+1650473508 c:\users\wendy\desktop\traductor - parte 2\parser.h
+
+1650473534 source:c:\users\wendy\desktop\traductor - parte 2\parser.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"parser.h"
+

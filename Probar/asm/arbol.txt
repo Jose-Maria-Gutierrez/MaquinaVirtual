@@ -1,0 +1,368 @@
+\\DATA 10
+\\EXTRA 1000
+\\STACK 1000
+; estructura de nodo de ├írbol
+value   equ     0
+left    equ     1
+right   equ     2
+; constantes
+NULL    equ     -1
+titulo  equ  "--- PRUEBA ARBOL BINARIO DE BUSQUEDA ---"
+msg_1   equ  "Recorrido en in-order:"
+msg_2   equ  "Recorrido en pre-order:"
+root    equ      1
+
+;main
+Error: Error de sintaxis
+[0000] FF FF FF FF       main:       push          1             ;creo la raiz del ├írbol
+Error: Error de sintaxis
+[0001] FF FF FF FF          2:       call      alloc
+[0002] 14 03 60 01          3:        add         sp,          1
+
+[0003] 64 00 AF FF          4:        cmp        eax,       NULL
+[0004] F2 00 00 38          5:         jz   main_end
+[0005] 0C 00 AF FF          6:        mov      [eax],       NULL
+[0006] 09 00 10 0A          7:        mov     [root],        eax
+
+[0007] F9 00 00 03          8:        ldh          3
+[0008] F8 00 00 BD          9:        ldl     titulo
+[0009] 05 00 D0 09         10:        mov        edx,         ac
+[0010] 04 03 A8 00         11:        mov         ax,       %800
+[0011] F0 00 00 04         12:        sys         %4
+
+Error: Error de sintaxis
+[0012] FF FF FF FF         13:       push         10
+Error: Error de sintaxis
+[0013] FF FF FF FF         14:       push     [root]
+Error: Error de sintaxis
+[0014] FF FF FF FF         15:       call insertValue
+[0015] 14 03 60 02         16:        add         sp,          2
+
+Error: Error de sintaxis
+[0016] FF FF FF FF         17:       push         15
+Error: Error de sintaxis
+[0017] FF FF FF FF         18:       push     [root]
+Error: Error de sintaxis
+[0018] FF FF FF FF         19:       call insertValue
+[0019] 14 03 60 02         20:        add         sp,          2
+
+Error: Error de sintaxis
+[0020] FF FF FF FF         21:       push          5
+Error: Error de sintaxis
+[0021] FF FF FF FF         22:       push     [root]
+Error: Error de sintaxis
+[0022] FF FF FF FF         23:       call insertValue
+[0023] 14 03 60 02         24:        add         sp,          2
+
+Error: Error de sintaxis
+[0024] FF FF FF FF         25:       push         20
+Error: Error de sintaxis
+[0025] FF FF FF FF         26:       push     [root]
+Error: Error de sintaxis
+[0026] FF FF FF FF         27:       call insertValue
+[0027] 14 03 60 02         28:        add         sp,          2
+
+Error: Error de sintaxis
+[0028] FF FF FF FF         29:       push         12
+Error: Error de sintaxis
+[0029] FF FF FF FF         30:       push     [root]
+Error: Error de sintaxis
+[0030] FF FF FF FF         31:       call insertValue
+[0031] 14 03 60 02         32:        add         sp,          2
+
+Error: Error de sintaxis
+[0032] FF FF FF FF         33:       push          8
+Error: Error de sintaxis
+[0033] FF FF FF FF         34:       push     [root]
+Error: Error de sintaxis
+[0034] FF FF FF FF         35:       call insertValue
+[0035] 14 03 60 02         36:        add         sp,          2
+
+Error: Error de sintaxis
+[0036] FF FF FF FF         37:       push          3
+Error: Error de sintaxis
+[0037] FF FF FF FF         38:       push     [root]
+Error: Error de sintaxis
+[0038] FF FF FF FF         39:       call insertValue
+[0039] 14 03 60 02         40:        add         sp,          2
+
+[0040] F9 00 00 03         41:        ldh          3
+[0041] F8 00 00 E6         42:        ldl      msg_1
+[0042] 05 00 D0 09         43:        mov        edx,         ac
+[0043] 04 03 A8 00         44:        mov         ax,       %800
+[0044] F0 00 00 04         45:        sys         %4
+
+Error: Error de sintaxis
+[0045] FF FF FF FF         46:       push     [root]
+Error: Error de sintaxis
+[0046] FF FF FF FF         47:       call print_inorder
+[0047] 14 03 60 01         48:        add         sp,          1
+
+[0048] F9 00 00 03         49:        ldh          3
+[0049] F8 00 00 FD         50:        ldl      msg_2
+[0050] 05 00 D0 09         51:        mov        edx,         ac
+[0051] 04 03 A8 00         52:        mov         ax,       %800
+[0052] F0 00 00 04         53:        sys         %4
+
+Error: Error de sintaxis
+[0053] FF FF FF FF         54:       push     [root]
+Error: Error de sintaxis
+[0054] FF FF FF FF         55:       call print_preorder
+[0055] 14 03 60 01         56:        add         sp,          1
+[0056] FF 10 00 00   main_end:       stop
+
+
+; Insertar un valor en el ├írbol binario
+; par├ímetros:
+;  - doble puntero a la raiz (bp+2)
+;  - valor del nuevo nodo (bp+3)
+Error: Error de sintaxis
+[0057] FF FF FF FF insertValue:       push         bp
+[0058] 05 03 70 36         59:        mov         bp,         sp
+Error: Error de sintaxis
+[0059] FF FF FF FF         60:       push        eax
+
+
+Error: Error de sintaxis
+[0060] FF FF FF FF         61:       push     [bp+3]
+Error: Error de sintaxis
+[0061] FF FF FF FF         62:       call    newnode
+[0062] 14 03 60 01         63:        add         sp,          1
+
+[0063] 64 00 AF FF         64:        cmp        eax,       NULL
+[0064] F2 00 00 45         65:         jz insertValue_end
+
+Error: Error de sintaxis
+[0065] FF FF FF FF         66:       push        eax
+Error: Error de sintaxis
+[0066] FF FF FF FF         67:       push     [bp+2]
+Error: Error de sintaxis
+[0067] FF FF FF FF         68:       call insertNode
+[0068] 14 03 60 02         69:        add         sp,          2
+
+Error: Error de sintaxis
+[0069] FF FF FF FF insertValue_end:        pop        eax
+[0070] 05 03 70 36         71:        mov         bp,         sp
+Error: Error de sintaxis
+[0071] FF FF FF FF         72:        pop         bp
+Error: Error de sintaxis
+[0072] FF FF FF FF         73:        ret
+
+
+
+; Insertar un nuevo nodo en el ├írbol binario de b├║squeda
+; parametros:
+;  - doble puntero a la raiz (bp+2)
+;  - puntero al nuevo nodo (bp+3)
+Error: Error de sintaxis
+[0073] FF FF FF FF insertNode:       push         bp
+[0074] 05 03 70 36         75:        mov         bp,         sp
+Error: Error de sintaxis
+[0075] FF FF FF FF         76:       push        ebx
+Error: Error de sintaxis
+[0076] FF FF FF FF         77:       push        edx
+
+
+[0077] 07 00 B0 27         78:        mov        ebx,     [bp+2]
+[0078] 6C 00 BF FF         79:        cmp      [ebx],       NULL ; si la raiz es NULL
+[0079] F2 00 00 60         80:         jz insertNode_1             ; entonces insertar en la raiz
+
+[0080] 07 00 B0 0B         81:        mov        ebx,      [ebx] ; sino compara para ir por izquierda o derecha
+[0081] 07 00 D0 37         82:        mov        edx,     [bp+3]
+[0082] 6F 00 D0 0B         83:        cmp [edx+value], [ebx+value]
+[0083] F3 00 00 5A         84:         jp insertNode_right
+
+[0084] 14 00 B0 01 insertNode_left:        add        ebx,       left
+Error: Error de sintaxis
+[0085] FF FF FF FF         86:       push        edx
+Error: Error de sintaxis
+[0086] FF FF FF FF         87:       push        ebx
+Error: Error de sintaxis
+[0087] FF FF FF FF         88:       call insertNode
+[0088] 14 03 60 02         89:        add         sp,          2
+
+[0089] F1 00 00 61         90:        jmp insertNode_end
+
+[0090] 14 00 B0 02 insertNode_right:        add        ebx,      right
+Error: Error de sintaxis
+[0091] FF FF FF FF         92:       push        edx
+Error: Error de sintaxis
+[0092] FF FF FF FF         93:       push        ebx
+Error: Error de sintaxis
+[0093] FF FF FF FF         94:       call insertNode
+[0094] 14 03 60 02         95:        add         sp,          2
+
+[0095] F1 00 00 61         96:        jmp insertNode_end
+
+[0096] 0F 00 B0 37 insertNode_1:        mov      [ebx],     [bp+3]
+
+Error: Error de sintaxis
+[0097] FF FF FF FF insertNode_end:        pop        edx
+Error: Error de sintaxis
+[0098] FF FF FF FF         99:        pop        ebx
+[0099] 05 03 70 36        100:        mov         bp,         sp
+Error: Error de sintaxis
+[0100] FF FF FF FF        101:        pop         bp
+Error: Error de sintaxis
+[0101] FF FF FF FF        102:        ret
+
+; crear un nodo del ├írbol, se le pasa como par├ímetro el valor
+; que se quiere guardar en el nodo
+; devuelve el puntero al nuevo nodo en eax
+Error: Error de sintaxis
+[0102] FF FF FF FF    newnode:       push         bp
+[0103] 05 03 70 36        104:        mov         bp,         sp
+
+Error: Error de sintaxis
+[0104] FF FF FF FF        105:       push          3
+Error: Error de sintaxis
+[0105] FF FF FF FF        106:       call      alloc
+[0106] 14 03 60 01        107:        add         sp,          1
+
+[0107] 64 00 AF FF        108:        cmp        eax,       NULL
+[0108] F2 00 00 70        109:         jz newnode_end
+
+[0109] 0F 00 A0 27        110:        mov [eax+value],     [bp+2]
+[0110] 0C 01 AF FF        111:        mov [eax+left],       NULL
+[0111] 0C 02 AF FF        112:        mov [eax+right],       NULL
+[0112] 05 03 70 36 newnode_end:        mov         bp,         sp
+Error: Error de sintaxis
+[0113] FF FF FF FF        114:        pop         bp
+Error: Error de sintaxis
+[0114] FF FF FF FF        115:        ret
+
+; alloc: devuelve en eax una direcci├│n de memora con espacio para un nuevo nodo
+Error: Error de sintaxis
+[0115] FF FF FF FF      alloc:       push         bp
+[0116] 05 03 70 36        117:        mov         bp,         sp
+Error: Error de sintaxis
+[0117] FF FF FF FF        118:       push         ac
+
+[0118] 05 00 A0 04        119:        mov        eax,         HP ; asginamos la direcci├│n de memoria
+[0119] 17 00 40 27        120:        add         HP,     [BP+2] ; HP = HP + tama├▒o solicitado
+
+[0120] 05 00 90 02        121:        mov         ac,         ES
+[0121] 84 00 90 10        122:        shr         ac,         16
+[0122] F9 00 00 02        123:        ldh      %0002
+[0123] 65 00 90 04        124:        cmp         ac,         HP ; verifico que no se alla pasado del limite del extra segment
+[0124] F7 00 00 7F        125:        jnn  alloc_end             ; si no se paso, finaliza
+[0125] 05 00 40 0A        126:        mov         HP,        eax ; si se pas├│ retrocede la asignaci├│n
+[0126] 04 00 AF FF        127:        mov        eax,       NULL ; devuelve NULL
+Error: Error de sintaxis
+[0127] FF FF FF FF  alloc_end:        pop         ac
+[0128] 05 03 60 37        129:        mov         sp,         bp
+Error: Error de sintaxis
+[0129] FF FF FF FF        130:        pop         bp
+Error: Error de sintaxis
+[0130] FF FF FF FF        131:        ret
+
+; Imprimir un ├írbol binario en inorden
+; par├ímetros:
+;  - doble puntero a la raiz (bp+2)
+Error: Error de sintaxis
+[0131] FF FF FF FF print_inorder:       push         bp
+[0132] 05 03 70 36        133:        mov         bp,         sp
+Error: Error de sintaxis
+[0133] FF FF FF FF        134:       push        eax
+Error: Error de sintaxis
+[0134] FF FF FF FF        135:       push        ebx
+Error: Error de sintaxis
+[0135] FF FF FF FF        136:       push        ecx
+Error: Error de sintaxis
+[0136] FF FF FF FF        137:       push        edx
+
+[0137] 07 00 B0 27        138:        mov        ebx,     [bp+2]
+[0138] 6C 00 BF FF        139:        cmp      [ebx],       NULL
+[0139] F2 00 00 99        140:         jz print_inorder_end
+
+
+[0140] 04 00 A0 01        141:        mov        eax,      %0001
+[0141] 04 00 C0 01        142:        mov        ecx,          1
+[0142] 07 00 D0 0B        143:        mov        edx,      [ebx]
+
+[0143] 07 00 B0 0B        144:        mov        ebx,      [ebx]
+
+[0144] 14 00 B0 01        145:        add        ebx,          1 ;left
+Error: Error de sintaxis
+[0145] FF FF FF FF        146:       push        ebx
+Error: Error de sintaxis
+[0146] FF FF FF FF        147:       call print_inorder
+[0147] 14 03 60 01        148:        add         sp,          1
+
+[0148] F0 00 00 02        149:        sys         %2             ;print
+
+[0149] 14 00 B0 01        150:        add        ebx,          1 ;right
+Error: Error de sintaxis
+[0150] FF FF FF FF        151:       push        ebx
+Error: Error de sintaxis
+[0151] FF FF FF FF        152:       call print_inorder
+[0152] 14 03 60 01        153:        add         sp,          1
+
+Error: Error de sintaxis
+[0153] FF FF FF FF print_inorder_end:        pop        edx
+Error: Error de sintaxis
+[0154] FF FF FF FF        155:        pop        ecx
+Error: Error de sintaxis
+[0155] FF FF FF FF        156:        pop        ebx
+Error: Error de sintaxis
+[0156] FF FF FF FF        157:        pop        eax
+[0157] 05 03 70 36        158:        mov         bp,         sp
+Error: Error de sintaxis
+[0158] FF FF FF FF        159:        pop         bp
+Error: Error de sintaxis
+[0159] FF FF FF FF        160:        ret
+
+; Imprimir un ├írbol binario en pre-order
+; par├ímetros:
+;  - doble puntero a la raiz (bp+2)
+Error: Error de sintaxis
+[0160] FF FF FF FF print_preorder:       push         bp
+[0161] 05 03 70 36        162:        mov         bp,         sp
+Error: Error de sintaxis
+[0162] FF FF FF FF        163:       push        eax
+Error: Error de sintaxis
+[0163] FF FF FF FF        164:       push        ebx
+Error: Error de sintaxis
+[0164] FF FF FF FF        165:       push        ecx
+Error: Error de sintaxis
+[0165] FF FF FF FF        166:       push        edx
+
+[0166] 07 00 B0 27        167:        mov        ebx,     [bp+2]
+[0167] 6C 00 BF FF        168:        cmp      [ebx],       NULL
+[0168] F2 00 00 B6        169:         jz print_preorder_end
+
+[0169] 04 00 A0 01        170:        mov        eax,      %0001
+[0170] 04 00 C0 01        171:        mov        ecx,          1
+[0171] 07 00 D0 0B        172:        mov        edx,      [ebx]
+[0172] F0 00 00 02        173:        sys         %2             ;print
+
+[0173] 07 00 B0 0B        174:        mov        ebx,      [ebx]
+
+[0174] 14 00 B0 01        175:        add        ebx,          1 ;left
+Error: Error de sintaxis
+[0175] FF FF FF FF        176:       push        ebx
+Error: Error de sintaxis
+[0176] FF FF FF FF        177:       call print_preorder
+[0177] 14 03 60 01        178:        add         sp,          1
+
+[0178] 14 00 B0 01        179:        add        ebx,          1 ;right
+Error: Error de sintaxis
+[0179] FF FF FF FF        180:       push        ebx
+Error: Error de sintaxis
+[0180] FF FF FF FF        181:       call print_preorder
+[0181] 14 03 60 01        182:        add         sp,          1
+
+Error: Error de sintaxis
+[0182] FF FF FF FF print_preorder_end:        pop        edx
+Error: Error de sintaxis
+[0183] FF FF FF FF        184:        pop        ecx
+Error: Error de sintaxis
+[0184] FF FF FF FF        185:        pop        ebx
+Error: Error de sintaxis
+[0185] FF FF FF FF        186:        pop        eax
+[0186] 05 03 70 36        187:        mov         bp,         sp
+Error: Error de sintaxis
+[0187] FF FF FF FF        188:        pop         bp
+Error: Error de sintaxis
+[0188] FF FF FF FF        189:        ret
+NO SE GENERO ARCHIVO

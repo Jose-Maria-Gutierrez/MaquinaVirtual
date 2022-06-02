@@ -1,0 +1,123 @@
+# depslib dependency file v1.0
+1650255459 source:c:\users\gutie\documents\proyectos\maquinavirtual\instrucciones.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"tipos.h"
+
+1650255159 c:\users\gutie\documents\proyectos\maquinavirtual\tipos.h
+
+1650255121 source:c:\users\gutie\documents\proyectos\maquinavirtual\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"tipos.h"
+
+1650219679 source:c:\users\gutie\documents\proyectos\maquinavirtual\ayudas.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"tipos.h"
+
+1650220664 source:c:\users\gutie\documents\proyectos\maquinavirtual\funciones.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"tipos.h"
+
+1654058411 source:c:\users\gutie\desktop\maquinavirtual\ayudas.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"tipos.h"
+
+1654108591 c:\users\gutie\desktop\maquinavirtual\tipos.h
+
+1654108555 source:c:\users\gutie\desktop\maquinavirtual\instrucciones.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	"tipos.h"
+
+1651359178 source:c:\users\gutie\desktop\maquinavirtual\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"tipos.h"
+
+1654108449 source:c:\users\gutie\desktop\maquinavirtual\funciones.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"tipos.h"
+
+1653924909 source:d:\escritorio\maquinavirtual\maquinavirtual\ayudas.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"tipos.h"
+
+1653938076 d:\escritorio\maquinavirtual\maquinavirtual\tipos.h
+
+1651359178 source:d:\escritorio\maquinavirtual\maquinavirtual\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"tipos.h"
+
+1653938869 source:d:\escritorio\maquinavirtual\maquinavirtual\funciones.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"tipos.h"
+
+1653938869 source:d:\escritorio\maquinavirtual\maquinavirtual\instrucciones.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	"tipos.h"
+
+1653924909 source:d:\documentos\facultad\arquitectura de computadoras\maquina virtual 2022\2.0\maquinavirtual\ayudas.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"tipos.h"
+
+1653938076 d:\documentos\facultad\arquitectura de computadoras\maquina virtual 2022\2.0\maquinavirtual\tipos.h
+
+1653939139 source:d:\documentos\facultad\arquitectura de computadoras\maquina virtual 2022\2.0\maquinavirtual\instrucciones.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	"tipos.h"
+
+1651359178 source:d:\documentos\facultad\arquitectura de computadoras\maquina virtual 2022\2.0\maquinavirtual\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"tipos.h"
+
+1653942440 source:d:\documentos\facultad\arquitectura de computadoras\maquina virtual 2022\2.0\maquinavirtual\funciones.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"tipos.h"
+
+1653939139 source:c:\users\gutie\desktop\ult\hola\maquinavirtual\instrucciones.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	"tipos.h"
+
+1653960932 c:\users\gutie\desktop\ult\hola\maquinavirtual\tipos.h
+
+1651359178 source:c:\users\gutie\desktop\ult\hola\maquinavirtual\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"tipos.h"
+

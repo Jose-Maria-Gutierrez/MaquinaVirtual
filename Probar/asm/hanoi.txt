@@ -1,0 +1,172 @@
+\\STACK 50
+titulo equ  "--- TORRE DE HANOI ---"
+msg    equ  "Ingrese la cantidad de discos:"
+strA  equ "Torre A"
+strB  equ "Torre B"
+strC  equ "Torre C"
+torreA equ 0
+torreB equ 1
+torreC equ 2
+str    equ 1 ; ubicaci├│n de los str
+step   equ 4
+[0000] 08 00 40 00          1:        mov     [step],          0
+[0001] F9 00 00 02          2:        ldh          2
+[0002] F8 00 00 32          3:        ldl         50
+[0003] 05 00 D0 09          4:        mov        edx,         ac
+[0004] F9 00 00 03          5:        ldh          3
+[0005] F8 00 00 82          6:        ldl        msg
+[0006] DF 00 D0 09          7:       smov      [edx],       [ac]
+[0007] F9 00 00 02          8:        ldh          2
+[0008] F8 00 00 0A          9:        ldl         10
+[0009] 05 00 D0 09         10:        mov        edx,         ac
+[0010] F9 00 00 03         11:        ldh          3
+[0011] F8 00 00 6B         12:        ldl     titulo
+[0012] DF 00 D0 09         13:       smov      [edx],       [ac]
+[0013] 04 03 A8 00         14:        mov         ax,       %800
+[0014] F0 00 00 04         15:        sys         %4
+[0015] 14 00 D0 28         16:        add        edx,         40
+[0016] 04 03 A9 00         17:        mov         ax,       %900
+[0017] F0 00 00 04         18:        sys         %4
+[0018] 04 00 D0 00         19:        mov        edx,          0
+[0019] 04 03 C0 01         20:        mov         cx,          1
+[0020] 04 03 A8 01         21:        mov         ax,       %801
+[0021] F0 00 00 01         22:        sys         %1
+[0022] 04 03 C0 01         23:        mov         cx,        str
+        ; Ubico los nombres de las torres
+[0023] F9 00 00 03         24:        ldh          3
+[0024] F8 00 00 A1         25:        ldl       strA
+[0025] 0D 00 C0 09         26:        mov [cx+torreA],         ac
+[0026] F8 00 00 A9         27:        ldl       strB
+[0027] 0D 01 C0 09         28:        mov [cx+torreB],         ac
+[0028] F8 00 00 B1         29:        ldl       strC
+[0029] 0D 02 C0 09         30:        mov [cx+torreC],         ac
+
+Error: Error de sintaxis
+[0030] FF FF FF FF         31:       push     torreC             ;torre auxiliar (aux)
+Error: Error de sintaxis
+[0031] FF FF FF FF         32:       push     torreB             ;torre destino  (dtn)
+Error: Error de sintaxis
+[0032] FF FF FF FF         33:       push     torreA             ;torre origen   (org)
+Error: Error de sintaxis
+[0033] FF FF FF FF         34:       push        [0]             ;cantidad de discos a mover
+Error: Error de sintaxis
+[0034] FF FF FF FF         35:       call      hanoi
+[0035] 14 03 60 05         36:        add         sp,          5
+[0036] FF 10 00 00         37:       stop
+; Hanoi
+; parametros: (1) Cant discos, (2) origen, (3) destino, (4) aux
+discos equ 2
+origen equ 3
+destino equ 4
+aux equ 5
+Error: Error de sintaxis
+[0037] FF FF FF FF      hanoi:       push         bp
+[0038] 05 03 70 36         39:        mov         bp,         sp
+Error: Error de sintaxis
+[0039] FF FF FF FF         40:       push         cx
+
+[0040] 07 03 C0 27         41:        mov         cx, [BP+discos]
+[0041] 64 03 C0 00         42:        cmp         cx,          0 ;si la cantidad a mover es 0...
+[0042] F2 00 00 3D         43:         jz       finh             ;...no hace nada
+[0043] 24 03 C0 01         44:        sub         cx,          1
+
+Error: Error de sintaxis
+[0044] FF FF FF FF         45:       push [BP+destino]             ;destion pasa a auxiliar
+Error: Error de sintaxis
+[0045] FF FF FF FF         46:       push   [BP+aux]             ;auxiliar es el nuevo destino
+Error: Error de sintaxis
+[0046] FF FF FF FF         47:       push [BP+origen]             ;el origen se mantiene
+Error: Error de sintaxis
+[0047] FF FF FF FF         48:       push         cx
+Error: Error de sintaxis
+[0048] FF FF FF FF         49:       call      hanoi
+[0049] 14 03 60 04         50:        add         sp,          4
+
+Error: Error de sintaxis
+[0050] FF FF FF FF         51:       push [BP+destino]             ;destino
+Error: Error de sintaxis
+[0051] FF FF FF FF         52:       push [BP+origen]             ;origen
+Error: Error de sintaxis
+[0052] FF FF FF FF         53:       call      print
+[0053] 14 03 60 02         54:        add         sp,          2
+
+Error: Error de sintaxis
+[0054] FF FF FF FF         55:       push [BP+origen]             ;el origen pasa a auxiliar
+Error: Error de sintaxis
+[0055] FF FF FF FF         56:       push [BP+destino]             ;el destino se mantiene
+Error: Error de sintaxis
+[0056] FF FF FF FF         57:       push   [BP+aux]             ;el auxiliar pasa a ser origen
+Error: Error de sintaxis
+[0057] FF FF FF FF         58:       push         cx
+Error: Error de sintaxis
+[0058] FF FF FF FF         59:       call      hanoi
+[0059] 14 03 60 04         60:        add         sp,          4
+[0060] F1 00 00 3D         61:        jmp       finh
+
+Error: Error de sintaxis
+[0061] FF FF FF FF       finh:        pop         cx
+[0062] 05 03 60 37         63:        mov         sp,         bp
+Error: Error de sintaxis
+[0063] FF FF FF FF         64:        pop         bp
+Error: Error de sintaxis
+[0064] FF FF FF FF         65:        ret
+
+desde  equ  2
+hasta  equ  3
+flecha equ " -> "
+paso equ "PASO "
+Error: Error de sintaxis
+[0065] FF FF FF FF      print:       push         bp
+[0066] 05 03 70 36         67:        mov         bp,         sp
+Error: Error de sintaxis
+[0067] FF FF FF FF         68:       push         ax
+Error: Error de sintaxis
+[0068] FF FF FF FF         69:       push         bx
+Error: Error de sintaxis
+[0069] FF FF FF FF         70:       push         cx
+Error: Error de sintaxis
+[0070] FF FF FF FF         71:       push        edx
+[0071] F9 00 00 03         72:        ldh          3
+[0072] F8 00 00 BE         73:        ldl       paso
+[0073] 05 00 D0 09         74:        mov        edx,         ac
+[0074] 04 03 B0 01         75:        mov         bx,          1
+[0075] 04 03 A9 00         76:        mov         ax,       %900
+[0076] F0 00 00 04         77:        sys         %4
+[0077] 04 00 D0 04         78:        mov        edx,       step
+[0078] 1C 00 D0 01         79:        add      [edx],          1
+[0079] 04 03 C0 01         80:        mov         cx,          1
+[0080] 04 03 A9 01         81:        mov         ax,       %901
+[0081] F0 00 00 02         82:        sys         %2
+[0082] 07 00 D0 27         83:        mov        edx, [bp+desde]
+[0083] 14 00 D0 01         84:        add        edx,        str
+[0084] 07 00 D0 0D         85:        mov        edx,      [edx]
+[0085] 04 03 A9 00         86:        mov         ax,       %900
+[0086] 04 03 B0 01         87:        mov         bx,          1
+[0087] F0 00 00 04         88:        sys         %4
+[0088] F9 00 00 03         89:        ldh          3
+[0089] F8 00 00 B9         90:        ldl     flecha
+[0090] 05 00 D0 09         91:        mov        edx,         ac
+[0091] 04 03 A9 00         92:        mov         ax,       %900
+[0092] 04 03 B0 01         93:        mov         bx,          1
+[0093] F0 00 00 04         94:        sys         %4
+[0094] 07 00 D0 37         95:        mov        edx, [bp+hasta]
+[0095] 14 00 D0 01         96:        add        edx,        str
+[0096] 07 00 D0 0D         97:        mov        edx,      [edx]
+[0097] 04 03 A8 00         98:        mov         ax,       %800
+[0098] 04 03 B0 01         99:        mov         bx,          1
+[0099] F0 00 00 04        100:        sys         %4
+
+Error: Error de sintaxis
+[0100] FF FF FF FF       finp:        pop        edx
+Error: Error de sintaxis
+[0101] FF FF FF FF        102:        pop         cx
+Error: Error de sintaxis
+[0102] FF FF FF FF        103:        pop         bx
+Error: Error de sintaxis
+[0103] FF FF FF FF        104:        pop         ax
+[0104] 05 03 60 37        105:        mov         sp,         bp
+Error: Error de sintaxis
+[0105] FF FF FF FF        106:        pop         bp
+Error: Error de sintaxis
+[0106] FF FF FF FF        107:        ret
+          NO SE GENERO ARCHIVO
